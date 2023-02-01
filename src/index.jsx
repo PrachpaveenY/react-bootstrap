@@ -1,30 +1,19 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route } from 'react-router-dom'
-import App from './App'
 import './index.css'
-import NavBar from './Components/NavBar'
-import Homepage from './Page/Homepage'
-import ProductList from './Page/ProductList'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
-
-class App extends React.Component {
-  render() {
-    return (
-      <div className='App'>
-        <BrowserRouter>
-        <div>
-          <NavBar/>
-          <Route path="/" exact={true} Component={Homepage}/>
-          <Route path="/productlist" Component={ProductList}/>
-        </div>
-        </BrowserRouter>
-      </div>
-    );
-  }
+export default function NavBar() {
+  return (
+    <nav>
+      <a className='navbar-expand-sm dark'>
+        <img src='' height='30' alt=''/>
+      </a>
+      <span className='navbar-brand text-info'>React.js</span>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+  )
 }
